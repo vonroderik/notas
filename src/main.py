@@ -37,6 +37,7 @@ if identificacao:
         aluno_encontrado = alunos.get(identificacao)
 
         if aluno_encontrado:
+            aluno_encontrado["Registro Acadêmico"] = str(aluno_encontrado["Registro Acadêmico"])
             st.success("Dados do aluno encontrados!")
             st.table(aluno_encontrado)  # Exibe em formato de tabela
         else:
