@@ -18,9 +18,8 @@ with open(caminho_arquivo, encoding="utf-8-sig") as file:
             "Vivência 1": float(row["vivencia1"]),
             "Vivência 2": float(row["vivencia2"]) if row["vivencia2"].strip() else 0.0,  # Evita erro por valores vazios
             "Vivência 3": float(row["vivencia3"]),
-            "Total": float(row["vivencia1"]) + 
-                     (float(row["vivencia2"]) if row["vivencia2"].strip() else 0.0) + 
-                     float(row["vivencia3"]),  # Soma das notas
+            "Prova Prática": float(row["prova_pratica"]),
+            "Total": float(row["total"])  # Soma das notas
         }
 
 # Interface com Streamlit
