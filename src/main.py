@@ -15,11 +15,11 @@ with open(caminho_arquivo, encoding="utf-8-sig") as file:
         ra = int(row["RA"])
         alunos[ra] = {
             "Registro Acadêmico": ra,
-            "Vivência 1": float(row["Vivencia1"]),
-            "Vivência 2": float(row["Vivencia2"]) if row["vivencia2"].strip() else 0.0,  # Evita erro por valores vazios
-            "Vivência 3": float(row["Vivencia3"]),
-            "Prova Prática": float(row["prova_pratica"]),
-            "Total": float(row["total"])  # Soma das notas
+            "Vivência 1": row["vivencia1"],
+            "Vivência 2": row["vivencia2"],
+            "Vivência 3": row["vivencia3"],
+            "Prova Prática": row["prova_pratica"],
+            "Total": row["total"]  # Soma das notas
         }
 
 # Interface com Streamlit
