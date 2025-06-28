@@ -12,7 +12,7 @@ caminho_arquivo = os.path.join(os.path.dirname(__file__), "..", "data", "notas.c
 with open(caminho_arquivo, encoding="utf-8-sig") as file:
     reader = csv.DictReader(file)
     for row in reader:
-        ra = int(row["registro_academico"])
+        ra = int(row["ra"])
         alunos[ra] = {
             "Registro Acadêmico": ra,
             "Vivência 1": float(row["vivencia1"]),
