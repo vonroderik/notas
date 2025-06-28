@@ -12,12 +12,12 @@ caminho_arquivo = os.path.join(os.path.dirname(__file__), "..", "data", "notas.c
 with open(caminho_arquivo, encoding="utf-8-sig") as file:
     reader = csv.DictReader(file)
     for row in reader:
-        ra = int(row["ra"])
+        ra = int(row["RA"])
         alunos[ra] = {
             "Registro Acadêmico": ra,
-            "Vivência 1": float(row["vivencia1"]),
-            "Vivência 2": float(row["vivencia2"]) if row["vivencia2"].strip() else 0.0,  # Evita erro por valores vazios
-            "Vivência 3": float(row["vivencia3"]),
+            "Vivência 1": float(row["Vivencia1"]),
+            "Vivência 2": float(row["Vivencia2"]) if row["vivencia2"].strip() else 0.0,  # Evita erro por valores vazios
+            "Vivência 3": float(row["Vivencia3"]),
             "Prova Prática": float(row["prova_pratica"]),
             "Total": float(row["total"])  # Soma das notas
         }
